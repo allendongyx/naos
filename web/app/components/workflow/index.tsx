@@ -369,8 +369,8 @@ const Workflow: FC<WorkflowProps> = memo(({
         minZoom={0.25}
       >
         <Background
-          gap={[14, 14]}
-          size={2}
+          // gap={[14, 14]}
+          // size={2}
           className="bg-workflow-canvas-workflow-bg"
           color='var(--color-workflow-canvas-workflow-dot-color)'
         />

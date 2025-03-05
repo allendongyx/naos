@@ -8,14 +8,15 @@ export default async function SignInLayout({ children }: any) {
     <div className={cn(
       style.background,
       'flex w-full min-h-screen',
-      'sm:p-4 lg:p-8',
-      'gap-x-20',
+      // 'sm:p-4 lg:p-8',
+      // 'gap-x-20',
       'justify-center lg:justify-start',
     )}>
       <div className={
         cn(
           'flex w-full flex-col bg-white shadow rounded-2xl shrink-0',
           'space-between',
+          style.signBackground,
         )
       }>
         <Header />
@@ -26,12 +27,12 @@ export default async function SignInLayout({ children }: any) {
             'md:px-[108px]',
           )
         }>
-          <div className='flex flex-col md:w-[400px]'>
+          <div className='flex flex-col bg-white shadow-md px-20 pt-10 pb-20'>
             {children}
           </div>
         </div>
         <div className='px-8 py-6 system-xs-regular text-text-tertiary'>
-          © {new Date().getFullYear()} LangGenius, Inc. All rights reserved.
+          © {new Date().getFullYear()} Naos
         </div>
       </div>
     </div>

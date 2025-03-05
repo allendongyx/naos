@@ -166,20 +166,41 @@ const Apps = ({
       pageType === PageType.EXPLORE ? 'h-full border-l border-gray-200' : 'h-[calc(100%-56px)]',
     )}>
       {pageType === PageType.EXPLORE && (
-        <div className='shrink-0 pt-6 px-12'>
-          <div className={`mb-1 ${s.textGradient} text-xl font-semibold`}>{t('explore.apps.title')}</div>
-          <div className='text-gray-500 text-sm'>{t('explore.apps.description')}</div>
-        </div>
+        <>
+          <div className='px-12 mt-4 h-[220px] relative'>
+            <div className='shrink-0 pt-6 px-12 absolute left-8 text-white z-10'>
+              <div className={'mb-1 text-white text-3xl'}>Naos: Connect ai to your Apps</div>
+              <div className='text-gray-400 text-base mt-2'>Advanced AI application platform.</div>
+              <div className='text-gray-400 text-base'>Create and discover popular AI applications, focusing on Web3.</div>
+              <div className='mt-4'>
+                <Input
+                  showLeftIcon
+                  showClearIcon
+                  className='h-10 w-full bg-white hover:bg-white'
+                  wrapperClassName='w-full'
+                  value={keywords}
+                  onChange={e => handleKeywordsChange(e.target.value)}
+                  onClear={() => handleKeywordsChange('')}
+                />
+
+              </div>
+            </div>
+            <div className='relative w-full h-full top-0 bottom-0 rounded-xl'>
+              <img className='w-full h-full z-0 rounded-xl' src='/imgs/wcl_loading.jpeg' />
+            </div>
+
+          </div>
+        </>
       )}
       <div className={cn(
-        'flex items-center justify-between mt-6',
-        pageType === PageType.EXPLORE ? 'px-12' : 'px-8',
+        'flex items-center justify-between mt-6 border-b border-b-gray-200',
+        pageType === PageType.EXPLORE ? 'mx-12' : 'mx-8',
       )}>
         <>
           {pageType !== PageType.EXPLORE && (
             <>
-              <AppTypeSelector value={currentType} onChange={setCurrentType}/>
-              <div className='mx-2 w-[1px] h-3.5 bg-gray-200'/>
+              <AppTypeSelector value={currentType} onChange={setCurrentType} />
+              <div className='mx-2 w-[1px] h-3.5 bg-gray-200' />
             </>
           )}
           <Category
@@ -189,19 +210,10 @@ const Apps = ({
             allCategoriesEn={allCategoriesEn}
           />
         </>
-        <Input
-          showLeftIcon
-          showClearIcon
-          wrapperClassName='w-[200px]'
-          value={keywords}
-          onChange={e => handleKeywordsChange(e.target.value)}
-          onClear={() => handleKeywordsChange('')}
-        />
-
       </div>
 
       <div className={cn(
-        'relative flex flex-1 pb-6 flex-col overflow-auto bg-gray-100 shrink-0 grow',
+        'relative flex flex-1 pb-6 flex-col overflow-auto naos-ctx-bg shrink-0 grow',
         pageType === PageType.EXPLORE ? 'mt-4' : 'mt-0 pt-2',
       )}>
         <nav

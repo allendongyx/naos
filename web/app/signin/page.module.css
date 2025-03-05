@@ -7,6 +7,10 @@
 }
 
 .background {
-  background-image: url('./assets/background.png');
+  /* background-image: url('./assets/background.png'); */
   background-size: cover;
+}
+.signBackground{
+  background: linear-gradient(173deg,#ecf4ff -.79%,#d3e1ff 94.5%);
+
 }

@@ -3,16 +3,15 @@ import { useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { RiCloseLine } from '@remixicon/react'
 import type { Collection } from './types'
+import LabelFilter from './labels/filter'
 import cn from '@/utils/classnames'
 import { useTabSearchParams } from '@/hooks/use-tab-searchparams'
 import TabSliderNew from '@/app/components/base/tab-slider-new'
-import LabelFilter from '@/app/components/tools/labels/filter'
 import Input from '@/app/components/base/input'
 import { DotsGrid } from '@/app/components/base/icons/src/vender/line/general'
 import { Colors } from '@/app/components/base/icons/src/vender/line/others'
 import { Route } from '@/app/components/base/icons/src/vender/line/mapsAndTravel'
 import CustomCreateCard from '@/app/components/tools/provider/custom-create-card'
-import ContributeCard from '@/app/components/tools/provider/contribute'
 import ProviderCard from '@/app/components/tools/provider/card'
 import ProviderDetail from '@/app/components/tools/provider/detail'
 import Empty from '@/app/components/tools/add-tool-modal/empty'
@@ -67,12 +66,24 @@ const ProviderList = () => {
   }, [collectionList, currentProvider])
 
   return (
-    <div className='relative flex overflow-hidden bg-gray-100 shrink-0 h-0 grow'>
-      <div className='relative flex flex-col overflow-y-auto bg-gray-100 grow'>
+    <div className='relative flex overflow-hidden naos-ctx-bg shrink-0 h-0 grow'>
+      <div className='relative flex flex-row overflow-y-auto naos-ctx-bg grow'>
         <div className={cn(
-          'sticky top-0 flex justify-between items-center pt-4 px-12 pb-2 leading-[56px] bg-gray-100 z-20 flex-wrap gap-y-2',
-          currentProvider && 'pr-6',
+          'sticky top-0 flex flex-col min-w-[216px] w-[216px] px-4 items-center pt-4 bg-white pb-2 leading-[56px] z-20 flex-wrap gap-y-2',
         )}>
+          <div className='flex items-center gap-2'>
+            <Input
+              showLeftIcon
+              showClearIcon
+              className='h-10'
+              wrapperClassName='w-full'
+              value={keywords}
+              onChange={e => handleKeywordsChange(e.target.value)}
+              onClear={() => handleKeywordsChange('')}
+            />
+          </div>
+          <CustomCreateCard onRefreshData={getProviderList} />
+
           <TabSliderNew
             value={activeTab}
             onChange={(state) => {
@@ -82,24 +93,19 @@ const ProviderList = () => {
             }}
             options={options}
           />
-          <div className='flex items-center gap-2'>
-            <LabelFilter value={tagFilterValue} onChange={handleTagsChange} />
-            <Input
-              showLeftIcon
-              showClearIcon
-              wrapperClassName='w-[200px]'
-              value={keywords}
-              onChange={e => handleKeywordsChange(e.target.value)}
-              onClear={() => handleKeywordsChange('')}
-            />
-          </div>
+
         </div>
         <div className={cn(
-          'relative grid content-start grid-cols-1 gap-4 px-12 pt-2 pb-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grow shrink-0',
-          currentProvider && 'pr-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3',
+          'relative grid content-start grid-row-1 gap-4 px-12 pt-4 pb-4 grow',
+          // currentProvider && 'pr-6',
         )}>
-          {activeTab === 'builtin' && <ContributeCard />}
-          {activeTab === 'api' && <CustomCreateCard onRefreshData={getProviderList} />}
+          <div className='flex flex-row w-full'>
+            <div className=''>
+              <LabelFilter value={tagFilterValue} onChange={handleTagsChange} />
+            </div>
+          </div>
+          {/* {activeTab === 'builtin' && <ContributeCard />} */}
+          {/* {activeTab === 'api' && <CustomCreateCard onRefreshData={getProviderList} />} */}
           {filteredCollectionList.map(collection => (
             <ProviderCard
               active={currentProvider?.id === collection.id}
@@ -117,7 +123,9 @@ const ProviderList = () => {
       )}>
         {currentProvider && <ProviderDetail collection={currentProvider} onRefreshData={getProviderList} />}
       </div>
-      <div className='absolute top-5 right-5 p-1 cursor-pointer' onClick={() => setCurrentProvider(undefined)}><RiCloseLine className='w-4 h-4' /></div>
+      {
+        currentProvider && <div className='absolute top-5 right-5 p-1 cursor-pointer' onClick={() => setCurrentProvider(undefined)}><RiCloseLine className='w-4 h-4' /></div>
+      }
     </div>
   )
 }

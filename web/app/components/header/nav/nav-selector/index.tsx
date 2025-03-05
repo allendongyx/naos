@@ -85,7 +85,7 @@ const NavSelector = ({ curNav, navs, createText, isApp, onCreate, onLoadmore }: 
                         router.push(nav.link)
                       }} title={nav.name}>
                         <div className='relative w-6 h-6 mr-2 rounded-md'>
-                          <AppIcon size='tiny' iconType={nav.icon_type} icon={nav.icon} background={nav.icon_background} imageUrl={nav.icon_url}/>
+                          <AppIcon size='tiny' iconType={nav.icon_type} icon={nav.icon} background={nav.icon_background} imageUrl={nav.icon_url} />
                           {!!nav.mode && (
                             <span className={cn(
                               'absolute w-3.5 h-3.5 -bottom-0.5 -right-0.5 p-0.5 bg-white rounded border-[0.5px] border-[rgba(0,0,0,0.02)] shadow-sm',

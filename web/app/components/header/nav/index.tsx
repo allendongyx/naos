@@ -4,9 +4,7 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import { useSelectedLayoutSegment } from 'next/navigation'
 import type { INavSelectorProps } from './nav-selector'
-import NavSelector from './nav-selector'
 import classNames from '@/utils/classnames'
-import { ArrowNarrowLeft } from '@/app/components/base/icons/src/vender/line/arrows'
 import { useStore as useAppStore } from '@/app/components/app/store'
 
 type INavProps = {
@@ -35,19 +33,19 @@ const Nav = ({
   const [hovered, setHovered] = useState(false)
   const segment = useSelectedLayoutSegment()
   const isActivated = Array.isArray(activeSegment) ? activeSegment.includes(segment!) : segment === activeSegment
-
   return (
     <div className={`
-      flex items-center h-8 mr-0 sm:mr-3 px-0.5 rounded-xl text-sm shrink-0 font-medium
-      ${isActivated && 'bg-components-main-nav-nav-button-bg-active shadow-md font-semibold'}
+      
+      flex items-center justify-center h-20 w-24 mr-0 rounded-xl text-sm shrink-0 font-medium
+      ${isActivated && ' xx shadow-md font-semibold'}
       ${!curNav && !isActivated && 'hover:bg-components-main-nav-nav-button-bg-hover'}
     `}>
       <Link href={link}>
         <div
           onClick={() => setAppDetail()}
           className={classNames(`
-            flex items-center h-7 px-2.5 cursor-pointer rounded-[10px]
-            ${isActivated ? 'text-components-main-nav-nav-button-text-active' : 'text-components-main-nav-nav-button-text'}
+            flex items-center flex-col h-7 px-2.5 cursor-pointer rounded-[10px]
+            ${isActivated ? 'xxx' : 'text-components-main-nav-nav-button-text'}
             ${curNav && isActivated && 'hover:bg-components-main-nav-nav-button-bg-active-hover'}
           `)}
           onMouseEnter={() => setHovered(true)}
@@ -55,17 +53,13 @@ const Nav = ({
         >
           <div className='mr-2'>
             {
-              (hovered && curNav)
-                ? <ArrowNarrowLeft className='w-4 h-4' />
-                : isActivated
-                  ? activeIcon
-                  : icon
+              (curNav && isActivated) ? activeIcon : icon
             }
           </div>
           {text}
         </div>
       </Link>
-      {
+      {/* {
         curNav && isActivated && (
           <>
             <div className='font-light text-gray-300 '>/</div>
@@ -79,7 +73,7 @@ const Nav = ({
             />
           </>
         )
-      }
+      } */}
     </div>
   )
 }

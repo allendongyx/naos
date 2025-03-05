@@ -33,7 +33,7 @@ const translation = {
   roadmap: '产品路线图',
   newApp: {
     learnMore: '了解更多',
-    startFromBlank: '创建空白应用',
+    startFromBlank: '创建新应用',
     startFromTemplate: '从应用模版创建',
     captionAppType: '想要哪种应用类型？',
     foundResult: '{{count}} 个结果',

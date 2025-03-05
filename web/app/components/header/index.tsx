@@ -14,6 +14,7 @@ import ExploreNav from './explore-nav'
 import ToolsNav from './tools-nav'
 import GithubStar from './github-star'
 import LicenseNav from './license-env'
+import styles from './index.module.css'
 import { WorkspaceProvider } from '@/context/workspace-context'
 import AppContext, { useAppContext } from '@/context/app-context'
 import LogoSite from '@/app/components/base/logo/logo-site'
@@ -21,9 +22,10 @@ import useBreakpoints, { MediaType } from '@/hooks/use-breakpoints'
 import { useProviderContext } from '@/context/provider-context'
 import { useModalContext } from '@/context/modal-context'
 import { LicenseStatus } from '@/types/feature'
+import classNames from '@/utils/classnames'
 
 const navClassName = `
-  flex items-center relative mr-0 sm:mr-3 px-3 h-8 rounded-xl
+  flex items-center relative mr-0 justify-center px-3 h-20 w-24 rounded-xl
   font-medium text-sm
   cursor-pointer
 `
@@ -50,7 +52,7 @@ const Header = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedSegment])
   return (
-    <div className='flex flex-1 items-center justify-between px-4 bg-background-body'>
+    <div className={classNames('flex flex-1 flex-col px-4', styles.sideCls)}>
       <div className='flex items-center'>
         {isMobile && <div
           className='flex items-center justify-center h-8 w-8 cursor-pointer'
@@ -74,14 +76,14 @@ const Header = () => {
         </div>
       )}
       {!isMobile && (
-        <div className='flex items-center'>
+        <div className='flex flex-col h-full col-span-2 items-center mt-4'>
           {!isCurrentWorkspaceDatasetOperator && <ExploreNav className={navClassName} />}
           {!isCurrentWorkspaceDatasetOperator && <AppNav />}
           {(isCurrentWorkspaceEditor || isCurrentWorkspaceDatasetOperator) && <DatasetNav />}
           {!isCurrentWorkspaceDatasetOperator && <ToolsNav className={navClassName} />}
         </div>
       )}
-      <div className='flex items-center flex-shrink-0'>
+      <div className='flex flex-col items-center flex-shrink-0'>
         <LicenseNav />
         <EnvNav />
         {enableBilling && (

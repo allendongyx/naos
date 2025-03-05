@@ -105,9 +105,9 @@ export default function MailAndPasswordAuth({ isInvite, isEmailSetup, allowRegis
 
   return <form onSubmit={() => { }}>
     <div className='mb-3'>
-      <label htmlFor="email" className="my-2 system-md-semibold text-text-secondary">
+      {/* <label htmlFor="email" className="my-2 system-md-semibold text-text-secondary">
         {t('login.email')}
-      </label>
+      </label> */}
       <div className="mt-1">
         <Input
           value={email}
@@ -123,21 +123,11 @@ export default function MailAndPasswordAuth({ isInvite, isEmailSetup, allowRegis
     </div>
 
     <div className='mb-3'>
-      <label htmlFor="password" className="my-2 flex items-center justify-between">
-        <span className='system-md-semibold text-text-secondary'>{t('login.password')}</span>
-        <Link
-          href={`/reset-password?${searchParams.toString()}`}
-          className={`system-xs-regular ${isEmailSetup ? 'text-components-button-secondary-accent-text' : 'text-components-button-secondary-accent-text-disabled pointer-events-none'}`}
-          tabIndex={isEmailSetup ? 0 : -1}
-          aria-disabled={!isEmailSetup}
-        >
-          {t('login.forget')}
-        </Link>
-      </label>
       <div className="relative mt-1">
         <Input
           id="password"
           value={password}
+          className='mt-2'
           onChange={e => setPassword(e.target.value)}
           onKeyDown={(e) => {
             if (e.key === 'Enter')
@@ -148,6 +138,16 @@ export default function MailAndPasswordAuth({ isInvite, isEmailSetup, allowRegis
           placeholder={t('login.passwordPlaceholder') || ''}
           tabIndex={2}
         />
+        <div className='flex flex-row justify-end items-center mt-2'>
+          <Link
+            href={`/reset-password?${searchParams.toString()}`}
+            className={`system-xs-regular ${isEmailSetup ? 'text-components-button-secondary-accent-text' : 'text-components-button-secondary-accent-text-disabled pointer-events-none'}`}
+            tabIndex={isEmailSetup ? 0 : -1}
+            aria-disabled={!isEmailSetup}
+          >
+            {t('login.forget')}
+          </Link>
+        </div>
         <div className="absolute inset-y-0 right-0 flex items-center">
           <Button
             type="button"
@@ -160,13 +160,15 @@ export default function MailAndPasswordAuth({ isInvite, isEmailSetup, allowRegis
       </div>
     </div>
 
-    <div className='mb-2'>
+    <div className='mb-2 mt-2 flex items-center justify-center'>
       <Button
         tabIndex={2}
         variant='primary'
+        size='large'
+
         onClick={handleEmailPasswordLogin}
         disabled={isLoading || !email || !password}
-        className="w-full"
+        className="w-60 h-12"
       >{t('login.signBtn')}</Button>
     </div>
   </form>

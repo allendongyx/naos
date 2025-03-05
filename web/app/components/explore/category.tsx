@@ -31,8 +31,8 @@ const Category: FC<ICategoryProps> = ({
   const isAllCategories = !list.includes(value as AppCategory) || value === allCategoriesEn
 
   const itemClassName = (isSelected: boolean) => cn(
-    'flex items-center px-3 py-[7px] h-[32px] rounded-lg border-[0.5px] border-transparent text-gray-700 font-medium leading-[18px] cursor-pointer hover:bg-gray-200',
-    isSelected && 'bg-white border-gray-200 shadow-xs text-primary-600 hover:bg-white',
+    'flex items-center px-3 py-[10px] px-[20px] h-[40px] rounded-lg border-[0.5px] border-transparent text-gray-700 font-medium leading-[18px] cursor-pointer hover:bg-gray-200',
+    isSelected && 'text-white bg-primary-600 border-gray-200 shadow-xs',
   )
 
   return (

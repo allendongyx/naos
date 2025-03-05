@@ -91,7 +91,7 @@ const BaseNode: FC<BaseNodeProps> = ({
   return (
     <div
       className={cn(
-        'flex border-[2px] rounded-2xl',
+        'flex shadow-md rounded-md border-2',
         showSelectedBorder ? 'border-components-option-card-option-selected-border' : 'border-transparent',
         !showSelectedBorder && data._inParallelHovering && 'border-workflow-block-border-highlight',
         data._waitingRun && 'opacity-70',

@@ -1,10 +1,10 @@
 const translation = {
-  pageTitle: 'Hey, let\'s get started!',
+  pageTitle: 'Log in to Naos',
   welcome: '👋 Welcome to Dify, please log in to continue.',
   email: 'Email address',
-  emailPlaceholder: 'Your email',
+  emailPlaceholder: 'Enter your email',
   password: 'Password',
-  passwordPlaceholder: 'Your password',
+  passwordPlaceholder: 'Enter your password',
   name: 'Username',
   namePlaceholder: 'Your username',
   forget: 'Forgot your password?',
