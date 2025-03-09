@@ -89,7 +89,7 @@ const Header = () => {
           <div className='flex flex-col h-full col-span-2 items-center mt-4'>
             {!isCurrentWorkspaceDatasetOperator && <ExploreNav className={navClassName} />}
             {!isCurrentWorkspaceDatasetOperator && <AppNav />}
-            {(isCurrentWorkspaceEditor || isCurrentWorkspaceDatasetOperator) && <DatasetNav />}
+            {/* {(isCurrentWorkspaceEditor || isCurrentWorkspaceDatasetOperator) && <DatasetNav />} */}
             {!isCurrentWorkspaceDatasetOperator && <ToolsNav className={navClassName} />}
           </div>
         )

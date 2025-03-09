@@ -176,7 +176,7 @@ const NodePanel: FC<Props> = ({
                 <StatusContainer status='stopped'>
                   {nodeInfo.error}
                   <a
-                    href='https://docs.dify.ai/guides/workflow/error-handling/error-type'
+                    href='https://docs.naos.one/guides/workflow/error-handling/error-type'
                     target='_blank'
                     className='text-text-accent'
                   >
