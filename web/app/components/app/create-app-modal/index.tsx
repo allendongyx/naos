@@ -5,8 +5,7 @@ import { useTranslation } from 'react-i18next'
 
 import { useRouter } from 'next/navigation'
 import { useContext, useContextSelector } from 'use-context-selector'
-import { RiArrowRightLine, RiCommandLine, RiCornerDownLeftLine, RiExchange2Fill } from '@remixicon/react'
-import Link from 'next/link'
+import { RiCommandLine, RiCornerDownLeftLine, RiExchange2Fill } from '@remixicon/react'
 import { useDebounceFn, useKeyPress } from 'ahooks'
 import Image from 'next/image'
 import AppIconPicker from '../../base/app-icon-picker'
@@ -23,7 +22,7 @@ import Input from '@/app/components/base/input'
 import Textarea from '@/app/components/base/textarea'
 import AppIcon from '@/app/components/base/app-icon'
 import AppsFull from '@/app/components/billing/apps-full-in-dialog'
-import { BubbleTextMod, ChatBot, ListSparkle, Logic } from '@/app/components/base/icons/src/vender/solid/communication'
+import { Logic } from '@/app/components/base/icons/src/vender/solid/communication'
 import { NEED_REFRESH_APP_LIST_KEY } from '@/config'
 import { getRedirection } from '@/utils/app-redirection'
 import FullScreenModal from '@/app/components/base/fullscreen-modal'
@@ -41,7 +40,7 @@ function CreateApp({ onClose, onSuccess, onCreateFromTemplate }: CreateAppProps)
   const { notify } = useContext(ToastContext)
   const mutateApps = useContextSelector(AppsContext, state => state.mutateApps)
 
-  const [appMode, setAppMode] = useState<AppMode>('chat')
+  const [appMode, setAppMode] = useState<AppMode>('agent-chat')
   const [appIcon, setAppIcon] = useState<AppIconSelection>({ type: 'emoji', icon: '🤖', background: '#FFEAD5' })
   const [showAppIconPicker, setShowAppIconPicker] = useState(false)
   const [name, setName] = useState('')
@@ -106,11 +105,11 @@ function CreateApp({ onClose, onSuccess, onCreateFromTemplate }: CreateAppProps)
           </div>
           <div className='flex flex-col w-[660px] gap-4'>
             <div>
-              <div className='mb-2'>
+              {/* <div className='mb-2'>
                 <span className='system-2xs-medium-uppercase text-text-tertiary'>{t('app.newApp.forBeginners')}</span>
-              </div>
+              </div> */}
               <div className='flex flex-row gap-2'>
-                <AppTypeCard
+                {/* <AppTypeCard
                   active={appMode === 'chat'}
                   title={t('app.types.chatbot')}
                   description={t('app.newApp.chatbotShortDescription')}
@@ -119,7 +118,7 @@ function CreateApp({ onClose, onSuccess, onCreateFromTemplate }: CreateAppProps)
                   </div>}
                   onClick={() => {
                     setAppMode('chat')
-                  }} />
+                  }} /> */}
                 <AppTypeCard
                   active={appMode === 'agent-chat'}
                   title={t('app.types.agent')}
@@ -130,7 +129,7 @@ function CreateApp({ onClose, onSuccess, onCreateFromTemplate }: CreateAppProps)
                   onClick={() => {
                     setAppMode('agent-chat')
                   }} />
-                <AppTypeCard
+                {/* <AppTypeCard
                   active={appMode === 'completion'}
                   title={t('app.newApp.completeApp')}
                   description={t('app.newApp.completionShortDescription')}
@@ -139,10 +138,21 @@ function CreateApp({ onClose, onSuccess, onCreateFromTemplate }: CreateAppProps)
                   </div>}
                   onClick={() => {
                     setAppMode('completion')
+                  }} /> */}
+                <AppTypeCard
+                  beta
+                  active={appMode === 'workflow'}
+                  title={t('app.types.workflow')}
+                  description={t('app.newApp.workflowShortDescription')}
+                  icon={<div className='w-6 h-6 bg-components-icon-bg-indigo-solid rounded-md flex items-center justify-center'>
+                    <RiExchange2Fill className='w-4 h-4 text-components-avatar-shape-fill-stop-100' />
+                  </div>}
+                  onClick={() => {
+                    setAppMode('workflow')
                   }} />
               </div>
             </div>
-            <div>
+            {/* <div>
               <div className='mb-2'>
                 <span className='system-2xs-medium-uppercase text-text-tertiary'>{t('app.newApp.forAdvanced')}</span>
               </div>
@@ -158,19 +168,9 @@ function CreateApp({ onClose, onSuccess, onCreateFromTemplate }: CreateAppProps)
                   onClick={() => {
                     setAppMode('advanced-chat')
                   }} />
-                <AppTypeCard
-                  beta
-                  active={appMode === 'workflow'}
-                  title={t('app.types.workflow')}
-                  description={t('app.newApp.workflowShortDescription')}
-                  icon={<div className='w-6 h-6 bg-components-icon-bg-indigo-solid rounded-md flex items-center justify-center'>
-                    <RiExchange2Fill className='w-4 h-4 text-components-avatar-shape-fill-stop-100' />
-                  </div>}
-                  onClick={() => {
-                    setAppMode('workflow')
-                  }} />
+
               </div>
-            </div>
+            </div> */}
             <Divider style={{ margin: 0 }} />
             <div className='flex space-x-3 items-center'>
               <div className='flex-1'>
@@ -216,10 +216,10 @@ function CreateApp({ onClose, onSuccess, onCreateFromTemplate }: CreateAppProps)
           </div>
           <div className='pt-5 pb-10 flex justify-between items-center'>
             <div className='flex gap-1 items-center system-xs-regular text-text-tertiary cursor-pointer' onClick={onCreateFromTemplate}>
-              <span>{t('app.newApp.noIdeaTip')}</span>
+              {/* <span>{t('app.newApp.noIdeaTip')}</span>
               <div className='p-[1px]'>
                 <RiArrowRightLine className='w-3.5 h-3.5' />
-              </div>
+              </div> */}
             </div>
             <div className='flex gap-2'>
               <Button onClick={onClose}>{t('app.newApp.Cancel')}</Button>
@@ -241,10 +241,10 @@ function CreateApp({ onClose, onSuccess, onCreateFromTemplate }: CreateAppProps)
           <AppPreview mode={appMode} />
           <div className='absolute left-0 right-0 border-b border-b-divider-subtle'></div>
           <div className='w-[664px] h-[448px] flex items-center justify-center' style={{ background: 'repeating-linear-gradient(135deg, transparent, transparent 2px, rgba(16,24,40,0.04) 4px,transparent 3px, transparent 6px)' }}>
-            <AppScreenShot show={appMode === 'chat'} mode='chat' />
-            <AppScreenShot show={appMode === 'advanced-chat'} mode='advanced-chat' />
+            {/* <AppScreenShot show={appMode === 'chat'} mode='chat' /> */}
+            {/* <AppScreenShot show={appMode === 'advanced-chat'} mode='advanced-chat' /> */}
             <AppScreenShot show={appMode === 'agent-chat'} mode='agent-chat' />
-            <AppScreenShot show={appMode === 'completion'} mode='completion' />
+            {/* <AppScreenShot show={appMode === 'completion'} mode='completion' /> */}
             <AppScreenShot show={appMode === 'workflow'} mode='workflow' />
           </div>
           <div className='absolute left-0 right-0 border-b border-b-divider-subtle'></div>
@@ -290,7 +290,7 @@ function AppTypeCard({ icon, title, beta = false, description, active, onClick }
   const { t } = useTranslation()
   return <div
     className={
-      cn(`w-[191px] h-[84px] p-3 border-[0.5px] relative box-content
+      cn(`w-full h-[84px] p-3 border-[0.5px] relative box-content
       rounded-xl border-components-option-card-option-border
       bg-components-panel-on-panel-item-bg shadow-xs cursor-pointer hover:shadow-md`, active
         ? 'outline outline-[1.5px] outline-components-option-card-option-selected-border shadow-md'
@@ -298,9 +298,9 @@ function AppTypeCard({ icon, title, beta = false, description, active, onClick }
     }
     onClick={onClick}
   >
-    {beta && <div className='px-[5px] py-[3px]
+    {/* {beta && <div className='px-[5px] py-[3px]
       rounded-[5px] min-w-[18px] absolute top-3 right-3
-      border border-divider-deep system-2xs-medium-uppercase text-text-tertiary'>{t('common.menus.status')}</div>}
+      border border-divider-deep system-2xs-medium-uppercase text-text-tertiary'>{t('common.menus.status')}</div>} */}
     {icon}
     <div className='system-sm-semibold text-text-secondary mt-2 mb-0.5'>{title}</div>
     <div className='system-xs-regular text-text-tertiary'>{description}</div>
@@ -310,26 +310,26 @@ function AppTypeCard({ icon, title, beta = false, description, active, onClick }
 function AppPreview({ mode }: { mode: AppMode }) {
   const { t } = useTranslation()
   const modeToPreviewInfoMap = {
-    'chat': {
-      title: t('app.types.chatbot'),
-      description: t('app.newApp.chatbotUserDescription'),
-      link: 'https://docs.dify.ai/guides/application-orchestrate/conversation-application?fallback=true',
-    },
-    'advanced-chat': {
-      title: t('app.types.advanced'),
-      description: t('app.newApp.advancedUserDescription'),
-      link: 'https://docs.dify.ai/guides/workflow',
-    },
+    // 'chat': {
+    //   title: t('app.types.chatbot'),
+    //   description: t('app.newApp.chatbotUserDescription'),
+    //   link: 'https://docs.dify.ai/guides/application-orchestrate/conversation-application?fallback=true',
+    // },
+    // 'advanced-chat': {
+    //   title: t('app.types.advanced'),
+    //   description: t('app.newApp.advancedUserDescription'),
+    //   link: 'https://docs.dify.ai/guides/workflow',
+    // },
     'agent-chat': {
       title: t('app.types.agent'),
       description: t('app.newApp.agentUserDescription'),
       link: 'https://docs.dify.ai/guides/application-orchestrate/agent',
     },
-    'completion': {
-      title: t('app.newApp.completeApp'),
-      description: t('app.newApp.completionUserDescription'),
-      link: null,
-    },
+    // 'completion': {
+    //   title: t('app.newApp.completeApp'),
+    //   description: t('app.newApp.completionUserDescription'),
+    //   link: null,
+    // },
     'workflow': {
       title: t('app.types.workflow'),
       description: t('app.newApp.workflowUserDescription'),
@@ -341,7 +341,7 @@ function AppPreview({ mode }: { mode: AppMode }) {
     <h4 className='system-sm-semibold-uppercase text-text-secondary'>{previewInfo.title}</h4>
     <div className='mt-1 system-xs-regular text-text-tertiary max-w-96 min-h-8'>
       <span>{previewInfo.description}</span>
-      {previewInfo.link && <Link target='_blank' href={previewInfo.link} className='text-text-accent ml-1'>{t('app.newApp.learnMore')}</Link>}
+      {/* {previewInfo.link && <Link target='_blank' href={previewInfo.link} className='text-text-accent ml-1'>{t('app.newApp.learnMore')}</Link>} */}
     </div>
   </div>
 }
@@ -349,10 +349,10 @@ function AppPreview({ mode }: { mode: AppMode }) {
 function AppScreenShot({ mode, show }: { mode: AppMode; show: boolean }) {
   const { theme } = useTheme()
   const modeToImageMap = {
-    'chat': 'Chatbot',
-    'advanced-chat': 'Chatflow',
+    // 'chat': 'Chatbot',
+    // 'advanced-chat': 'Chatflow',
     'agent-chat': 'Agent',
-    'completion': 'TextGenerator',
+    // 'completion': 'TextGenerator',
     'workflow': 'Workflow',
   }
   return <picture>

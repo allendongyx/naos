@@ -134,13 +134,26 @@ const Apps = () => {
 
   return (
     <>
-      <div className='sticky top-0 flex justify-between items-center pt-4 px-12 pb-2 leading-[56px] bg-background-body z-10 flex-wrap gap-y-2'>
+      <div className='sticky top-0 flex flex-col bg-white min-w-[216px] w-[216px] items-center p-4 leading-[56px] bg-background-body z-10 flex-wrap gap-y-2'>
+        <Input
+          showLeftIcon
+          showClearIcon
+          className='h-10'
+          wrapperClassName='w-full'
+          value={keywords}
+          onChange={e => handleKeywordsChange(e.target.value)}
+          onClear={() => handleKeywordsChange('')}
+        />
+        <NewAppCard onSuccess={mutate} />
+        <div className='h-2 w-full border-b border-b-gray-200'></div>
         <TabSliderNew
           value={activeTab}
           onChange={setActiveTab}
           options={options}
         />
-        <div className='flex items-center gap-2'>
+      </div>
+      <div className='flex flex-col w-full px-12 pt-6 naos-ctx-bg'>
+        <div className='flex items-center gap-2 mb-4'>
           <CheckboxWithLabel
             className='mr-2'
             label={t('app.showMyCreatedAppsOnly')}
@@ -148,34 +161,32 @@ const Apps = () => {
             onChange={handleCreatedByMeChange}
           />
           <TagFilter type='app' value={tagFilterValue} onChange={handleTagsChange} />
-          <Input
+          {/* <Input
             showLeftIcon
             showClearIcon
             wrapperClassName='w-[200px]'
             value={keywords}
             onChange={e => handleKeywordsChange(e.target.value)}
             onClear={() => handleKeywordsChange('')}
-          />
+          /> */}
         </div>
+        {(data && data[0].total > 0)
+          ? <div className='grid content-start grid-cols-4  gap-4  pt-2 grow relative'>
+            {isCurrentWorkspaceEditor
+              && data.map(({ data: apps }) => apps.map(app => (
+                <AppCard key={app.id} app={app} onRefresh={mutate} />
+              )))}
+          </div>
+          : <div className='grid content-start grid-cols-4  gap-4 pt-2 grow relative overflow-hidden'>
+            {isCurrentWorkspaceEditor && <NoAppsFound />}
+          </div>}
+        <CheckModal />
+        <div ref={anchorRef} className='h-0'> </div>
+        {showTagManagementModal && (
+          <TagManagementModal type='app' show={showTagManagementModal} />
+        )}
       </div>
-      {(data && data[0].total > 0)
-        ? <div className='grid content-start grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-5 2k:grid-cols-6 gap-4 px-12 pt-2 grow relative'>
-          {isCurrentWorkspaceEditor
-            && <NewAppCard onSuccess={mutate} />}
-          {data.map(({ data: apps }) => apps.map(app => (
-            <AppCard key={app.id} app={app} onRefresh={mutate} />
-          )))}
-        </div>
-        : <div className='grid content-start grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-5 2k:grid-cols-6 gap-4 px-12 pt-2 grow relative overflow-hidden'>
-          {isCurrentWorkspaceEditor
-            && <NewAppCard className='z-10' onSuccess={mutate} />}
-          <NoAppsFound />
-        </div>}
-      <CheckModal />
-      <div ref={anchorRef} className='h-0'> </div>
-      {showTagManagementModal && (
-        <TagManagementModal type='app' show={showTagManagementModal} />
-      )}
+
     </>
   )
 }

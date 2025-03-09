@@ -166,13 +166,34 @@ const Apps = ({
       'flex flex-col h-full border-l-[0.5px] border-divider-regular',
     )}>
 
-      <div className='shrink-0 pt-6 px-12'>
-        <div className={`mb-1 ${s.textGradient} text-xl font-semibold`}>{t('explore.apps.title')}</div>
-        <div className='text-text-tertiary text-sm'>{t('explore.apps.description')}</div>
-      </div>
+      <>
+        <div className='px-12 mt-4 h-[220px] relative'>
+          <div className='shrink-0 pt-6 px-12 absolute left-8 text-white z-10'>
+            <div className={'mb-1 text-white text-3xl'}>Naos: Connect ai to your Apps</div>
+            <div className='text-gray-400 text-base mt-2'>Advanced AI application platform.</div>
+            <div className='text-gray-400 text-base'>Create and discover popular AI applications, focusing on Web3.</div>
+            <div className='mt-4'>
 
+              <Input
+                showLeftIcon
+                showClearIcon
+                className='h-10 w-full bg-white hover:bg-white'
+                wrapperClassName='w-full'
+                value={keywords}
+                onChange={e => handleKeywordsChange(e.target.value)}
+                onClear={() => handleKeywordsChange('')}
+              />
+
+            </div>
+          </div>
+          <div className='relative w-full h-full top-0 bottom-0 rounded-xl'>
+            <img className='w-full h-full z-0 rounded-xl' src='/imgs/wcl_loading.jpeg' />
+          </div>
+
+        </div>
+      </>
       <div className={cn(
-        'flex items-center justify-between mt-6 px-12',
+        'flex items-center justify-between mt-6 mx-12 border-b-gray-200 border-b',
       )}>
         <>
           <Category
@@ -182,19 +203,11 @@ const Apps = ({
             allCategoriesEn={allCategoriesEn}
           />
         </>
-        <Input
-          showLeftIcon
-          showClearIcon
-          wrapperClassName='w-[200px]'
-          value={keywords}
-          onChange={e => handleKeywordsChange(e.target.value)}
-          onClear={() => handleKeywordsChange('')}
-        />
 
       </div>
 
       <div className={cn(
-        'relative flex flex-1 pb-6 flex-col overflow-auto shrink-0 grow mt-4',
+        'relative flex flex-1 pb-6 flex-col naos-ctx-bg overflow-auto shrink-0 grow mt-4',
       )}>
         <nav
           className={cn(

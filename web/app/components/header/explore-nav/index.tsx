@@ -22,15 +22,21 @@ const ExploreNav = ({
   return (
     <Link href="/explore/apps" className={classNames(
       className, 'group',
-      activated && 'bg-components-main-nav-nav-button-bg-active shadow-md',
+      activated && 'bg-components-main-nav-nav-button-bg-active shadow-sm',
       activated ? 'text-components-main-nav-nav-button-text-active' : 'text-components-main-nav-nav-button-text hover:bg-components-main-nav-nav-button-bg-hover',
     )}>
-      {
-        activated
-          ? <RiPlanetFill className='mr-2 w-4 h-4' />
-          : <RiPlanetLine className='mr-2 w-4 h-4' />
-      }
-      {t('common.menus.explore')}
+      <div className='flex flex-col'>
+        <div className='flex justify-center items-center'>
+          {
+            activated
+              ? <RiPlanetFill className='mr-2 w-4 h-4' />
+              : <RiPlanetLine className='mr-2 w-4 h-4' />
+          }
+        </div>
+        <div>
+          {t('common.menus.explore')}
+        </div>
+      </div>
     </Link>
   )
 }

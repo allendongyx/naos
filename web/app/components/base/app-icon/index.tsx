@@ -31,7 +31,7 @@ const appIconVariants = cva(
         medium: 'w-9 h-9 text-[22px]',
         large: 'w-10 h-10 text-[24px]',
         xl: 'w-12 h-12 text-[28px]',
-        xxl: 'w-14 h-14 text-[32px]',
+        xxl: 'w-20 h-20 text-[32px]',
       },
       rounded: {
         true: 'rounded-full',

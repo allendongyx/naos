@@ -39,8 +39,8 @@ export default function AccountAbout({
           <LogoSite className='mx-auto mb-2' />
           <div className='mb-3 text-center text-xs font-normal text-gray-500'>Version {langeniusVersionInfo?.current_version}</div>
           <div className='mb-4 text-center text-xs font-normal text-gray-700'>
-            <div>© {dayjs().year()} LangGenius, Inc., Contributors.</div>
-            <div className='text-[#1C64F2]'>
+            <div>© {dayjs().year()} Naos, Inc., Contributors.</div>
+            {/* <div className='text-[#1C64F2]'>
               {
                 IS_CE_EDITION
                   ? <Link href={'https://github.com/langgenius/dify/blob/main/LICENSE'} target='_blank' rel='noopener noreferrer'>Open Source License</Link>
@@ -49,7 +49,7 @@ export default function AccountAbout({
                     <Link href='https://dify.ai/terms' target='_blank' rel='noopener noreferrer'>Terms of Service</Link>
                   </>
               }
-            </div>
+            </div> */}
           </div>
         </div>
         <div className='mb-4 -mx-8 h-[0.5px] bg-gray-200' />
@@ -61,7 +61,7 @@ export default function AccountAbout({
                 : t('common.about.nowAvailable', { version: langeniusVersionInfo.latest_version })
             }
           </div>
-          <div className='flex items-center'>
+          {/* <div className='flex items-center'>
             <Link
               className={classNames(buttonClassName, 'mr-2')}
               href={'https://github.com/langgenius/dify/releases'}
@@ -80,7 +80,7 @@ export default function AccountAbout({
                 </Link>
               )
             }
-          </div>
+          </div> */}
         </div>
       </div>
     </Modal>

@@ -18,10 +18,13 @@ const Layout = ({ children }: { children: ReactNode }) => {
           <EventEmitterContextProvider>
             <ProviderContextProvider>
               <ModalContextProvider>
-                <HeaderWrapper>
-                  <Header />
-                </HeaderWrapper>
-                {children}
+                <div className="flex flex-row w-full items-stretch">
+
+                  <HeaderWrapper>
+                    <Header />
+                  </HeaderWrapper>
+                  <div className="w-full h-full grow relative flex flex-col overflow-y-auto overflow-x-hidden">{children}</div>
+                </div>
               </ModalContextProvider>
             </ProviderContextProvider>
           </EventEmitterContextProvider>

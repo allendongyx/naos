@@ -9,7 +9,7 @@ import './styles/globals.css'
 import './styles/markdown.scss'
 
 export const metadata = {
-  title: 'Dify',
+  title: 'Naos - Create your ai agent for web3',
 }
 
 export const viewport: Viewport = {

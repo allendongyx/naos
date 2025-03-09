@@ -13,3 +13,8 @@
   height: 12px;
   background: url(./assets/alpha.svg) center center no-repeat;
 }
+
+
+.sideCls {
+  background-color: #f9fbff;
+}

@@ -21,9 +21,9 @@ html[data-theme="light"] {
   --color-components-tooltip-bg: #fffffff2;
 
   --color-components-button-primary-text: #ffffff;
-  --color-components-button-primary-bg: #155aef;
+  --color-components-button-primary-bg: #6a3ac7;
   --color-components-button-primary-border: #1018280a;
-  --color-components-button-primary-bg-hover: #004aeb;
+  --color-components-button-primary-bg-hover: #572fb3;
   --color-components-button-primary-border-hover: #10182814;
   --color-components-button-primary-bg-disabled: #155aef24;
   --color-components-button-primary-border-disabled: #ffffff00;
@@ -147,7 +147,7 @@ html[data-theme="light"] {
   --color-components-panel-bg-transparent: #ffffff00;
 
   --color-components-main-nav-nav-button-text: #495464;
-  --color-components-main-nav-nav-button-text-active: #155aef;
+  --color-components-main-nav-nav-button-text-active: #885bd2;
   --color-components-main-nav-nav-button-bg: #ffffff00;
   --color-components-main-nav-nav-button-bg-active: #fcfcfd;
   --color-components-main-nav-nav-button-border: #fffffff2;
@@ -363,7 +363,7 @@ html[data-theme="light"] {
   --color-text-destructive-secondary: #f04438;
   --color-text-success-secondary: #17b26a;
   --color-text-warning-secondary: #f79009;
-  --color-text-accent: #155aef;
+  --color-text-accent: #885bd2;
   --color-text-primary-on-surface: #ffffff;
   --color-text-placeholder: #98a2b2;
   --color-text-disabled: #d0d5dc;

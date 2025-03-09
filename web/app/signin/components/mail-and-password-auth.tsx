@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useRouter, useSearchParams } from 'next/navigation'
@@ -11,14 +10,18 @@ import Input from '@/app/components/base/input'
 import I18NContext from '@/context/i18n'
 
 type MailAndPasswordAuthProps = {
-  isInvite: boolean
-  isEmailSetup: boolean
-  allowRegistration: boolean
+  isInvite: boolean;
+  isEmailSetup: boolean;
+  allowRegistration: boolean;
 }
 
 const passwordRegex = /^(?=.*[a-zA-Z])(?=.*\d).{8,}$/
 
-export default function MailAndPasswordAuth({ isInvite, isEmailSetup, allowRegistration }: MailAndPasswordAuthProps) {
+export default function MailAndPasswordAuth({
+  isInvite,
+  isEmailSetup,
+  allowRegistration,
+}: MailAndPasswordAuthProps) {
   const { t } = useTranslation()
   const { locale } = useContext(I18NContext)
   const router = useRouter()
@@ -60,8 +63,11 @@ export default function MailAndPasswordAuth({ isInvite, isEmailSetup, allowRegis
         language: locale,
         remember_me: true,
       }
-      if (isInvite)
-        loginData.invite_token = decodeURIComponent(searchParams.get('invite_token') as string)
+      if (isInvite) {
+        loginData.invite_token = decodeURIComponent(
+          searchParams.get('invite_token') as string,
+        )
+      }
       const res = await login({
         url: '/login',
         body: loginData,
@@ -97,77 +103,92 @@ export default function MailAndPasswordAuth({ isInvite, isEmailSetup, allowRegis
         })
       }
     }
-
     finally {
       setIsLoading(false)
     }
   }
 
-  return <form onSubmit={() => { }}>
-    <div className='mb-3'>
-      <label htmlFor="email" className="my-2 system-md-semibold text-text-secondary">
+  return (
+    <form onSubmit={() => {}}>
+      <div className="mb-3">
+        {/* <label htmlFor="email" className="my-2 system-md-semibold text-text-secondary">
         {t('login.email')}
-      </label>
-      <div className="mt-1">
-        <Input
-          value={email}
-          onChange={e => setEmail(e.target.value)}
-          disabled={isInvite}
-          id="email"
-          type="email"
-          autoComplete="email"
-          placeholder={t('login.emailPlaceholder') || ''}
-          tabIndex={1}
-        />
-      </div>
-    </div>
-
-    <div className='mb-3'>
-      <label htmlFor="password" className="my-2 flex items-center justify-between">
-        <span className='system-md-semibold text-text-secondary'>{t('login.password')}</span>
-        <Link
-          href={`/reset-password?${searchParams.toString()}`}
-          className={`system-xs-regular ${isEmailSetup ? 'text-components-button-secondary-accent-text' : 'text-components-button-secondary-accent-text-disabled pointer-events-none'}`}
-          tabIndex={isEmailSetup ? 0 : -1}
-          aria-disabled={!isEmailSetup}
-        >
-          {t('login.forget')}
-        </Link>
-      </label>
-      <div className="relative mt-1">
-        <Input
-          id="password"
-          value={password}
-          onChange={e => setPassword(e.target.value)}
-          onKeyDown={(e) => {
-            if (e.key === 'Enter')
-              handleEmailPasswordLogin()
-          }}
-          type={showPassword ? 'text' : 'password'}
-          autoComplete="current-password"
-          placeholder={t('login.passwordPlaceholder') || ''}
-          tabIndex={2}
-        />
-        <div className="absolute inset-y-0 right-0 flex items-center">
-          <Button
-            type="button"
-            variant='ghost'
-            onClick={() => setShowPassword(!showPassword)}
-          >
-            {showPassword ? '👀' : '😝'}
-          </Button>
+      </label> */}
+        <div className="mt-1">
+          <Input
+            value={email}
+            className='h-14'
+            onChange={e => setEmail(e.target.value)}
+            disabled={isInvite}
+            id="email"
+            type="email"
+            autoComplete="email"
+            placeholder={t('login.emailPlaceholder') || ''}
+            tabIndex={1}
+          />
         </div>
       </div>
-    </div>
 
-    <div className='mb-2'>
-      <Button
-        tabIndex={2}
-        variant='primary'
-        onClick={handleEmailPasswordLogin}
-        disabled={isLoading || !email || !password}
-        className="w-full"
-      >{t('login.signBtn')}</Button>
-    </div>
-  </form>
+      <div className="mb-3">
+        {/* <label
+            htmlFor="password"
+            className="my-2 flex items-center justify-between"
+          >
+            <span className="system-md-semibold text-text-secondary">
+              {t('login.password')}
+            </span>
+            <Link
+              href={`/reset-password?${searchParams.toString()}`}
+              className={`system-xs-regular ${
+                isEmailSetup
+                  ? 'text-components-button-secondary-accent-text'
+                  : 'text-components-button-secondary-accent-text-disabled pointer-events-none'
+              }`}
+              tabIndex={isEmailSetup ? 0 : -1}
+              aria-disabled={!isEmailSetup}
+            >
+              {t('login.forget')}
+            </Link>
+          </label> */}
+        <div className="relative mt-1">
+          <Input
+            id="password"
+            value={password}
+            className='mt-2 h-14'
+            // wrapperClassName='h-20'
+            onChange={e => setPassword(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') handleEmailPasswordLogin()
+            }}
+            type={showPassword ? 'text' : 'password'}
+            autoComplete="current-password"
+            placeholder={t('login.passwordPlaceholder') || ''}
+            tabIndex={2}
+          />
+          <div className="absolute inset-y-0 right-0 flex items-center">
+            <Button
+              type="button"
+              variant="ghost"
+              onClick={() => setShowPassword(!showPassword)}
+            >
+              {showPassword ? '👀' : '😝'}
+            </Button>
+          </div>
+        </div>
+      </div>
+
+      <div className='mb-2 mt-10 flex items-center justify-center'>
+        <Button
+          tabIndex={2}
+          size='large'
+          variant="primary"
+          onClick={handleEmailPasswordLogin}
+          // disabled={isLoading || !email || !password}
+          className="w-60 h-12"
+        >
+          {t('login.signBtn')}
+        </Button>
+      </div>
+    </form>
+  )
 }

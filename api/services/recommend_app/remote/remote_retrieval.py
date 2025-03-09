@@ -58,7 +58,8 @@ class RemoteRecommendAppRetrieval(RecommendAppRetrievalBase):
         :return:
         """
         domain = dify_config.HOSTED_FETCH_APP_TEMPLATES_REMOTE_DOMAIN
-        url = f"{domain}/apps?language={language}"
+        url = f"{domain}/appsv2?language={language}"
+        print(url)
         response = requests.get(url, timeout=(3, 10))
         if response.status_code != 200:
             raise ValueError(f"fetch recommended apps failed, status code: {response.status_code}")

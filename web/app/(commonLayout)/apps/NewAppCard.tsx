@@ -39,15 +39,15 @@ const CreateAppCard = forwardRef<HTMLDivElement, CreateAppCardProps>(({ classNam
   return (
     <div
       ref={ref}
-      className={cn('relative col-span-1 inline-flex flex-col justify-between h-[160px] bg-components-card-bg rounded-xl border-[0.5px] border-components-card-border', className)}
+      className={cn('relative col-span-1 inline-flex flex-col justify-between w-full rounded-xl border-[0.5px] border-components-card-border', className)}
     >
-      <div className='grow p-2 rounded-t-xl'>
-        <div className='px-6 pt-2 pb-1 text-xs font-medium leading-[18px] text-text-tertiary'>{t('app.createApp')}</div>
-        <button className='w-full flex items-center mb-1 px-6 py-[7px] rounded-lg text-[13px] font-medium leading-[18px] text-text-tertiary cursor-pointer hover:text-text-secondary hover:bg-state-base-hover' onClick={() => setShowNewAppModal(true)}>
+      <div className='grow rounded-t-xl'>
+        <div className='pt-2 pb-1 text-xs font-medium leading-[18px] text-text-tertiary'>{t('app.createApp')}</div>
+        <button className='w-full flex items-center mb-1 px-6 py-[7px] bg-primary-600 text-white rounded-lg text-[14px] font-medium leading-[30px] text-text-tertiary cursor-pointer hover:text-white hover:bg-primary-500' onClick={() => setShowNewAppModal(true)}>
           <FilePlus01 className='shrink-0 mr-2 w-4 h-4' />
           {t('app.newApp.startFromBlank')}
         </button>
-        <button className='w-full flex items-center px-6 py-[7px] rounded-lg text-[13px] font-medium leading-[18px] text-text-tertiary cursor-pointer hover:text-text-secondary hover:bg-state-base-hover' onClick={() => setShowNewAppTemplateDialog(true)}>
+        {/* <button className='w-full flex items-center px-6 py-[7px] rounded-lg text-[13px] font-medium leading-[18px] text-text-tertiary cursor-pointer hover:text-text-secondary hover:bg-state-base-hover' onClick={() => setShowNewAppTemplateDialog(true)}>
           <FilePlus02 className='shrink-0 mr-2 w-4 h-4' />
           {t('app.newApp.startFromTemplate')}
         </button>
@@ -56,7 +56,7 @@ const CreateAppCard = forwardRef<HTMLDivElement, CreateAppCardProps>(({ classNam
           className='w-full flex items-center px-6 py-[7px] rounded-lg text-[13px] font-medium leading-[18px] text-text-tertiary cursor-pointer hover:text-text-secondary hover:bg-state-base-hover'>
           <FileArrow01 className='shrink-0 mr-2 w-4 h-4' />
           {t('app.importDSL')}
-        </button>
+        </button> */}
       </div>
 
       <CreateAppModal

@@ -137,8 +137,8 @@ const translation = {
   },
   menus: {
     status: 'beta',
-    explore: '探索',
-    apps: '工作室',
+    explore: '发现',
+    apps: '工作空间',
     plugins: '插件',
     exploreMarketplace: '探索 Marketplace',
     pluginsTips: '集成第三方插件或创建与 ChatGPT 兼容的 AI 插件。',
@@ -500,8 +500,8 @@ const translation = {
   about: {
     changeLog: '更新日志',
     updateNow: '现在更新',
-    nowAvailable: 'Dify {{version}} 现已可用。',
-    latestAvailable: 'Dify {{version}} 已是最新版本。',
+    nowAvailable: 'Naos {{version}} 现已可用。',
+    latestAvailable: 'Naos {{version}} 已是最新版本。',
   },
   appMenus: {
     overview: '监测',

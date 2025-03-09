@@ -55,7 +55,7 @@ const ListWithCollection = ({
               }
             </div>
             <div className={cn(
-              'grid grid-cols-4 gap-3 mt-2',
+              'flex flex-col gap-3 mt-2',
               cardContainerClassName,
             )}>
               {
