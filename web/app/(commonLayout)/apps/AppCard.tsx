@@ -277,19 +277,10 @@ const AppCard = ({ app, onRefresh }: AppCardProps) => {
           e.preventDefault()
           getRedirection(isCurrentWorkspaceEditor, app, push)
         }}
-        className='relative h-[160px] group col-span-1 bg-components-card-bg border-[1px] border-solid border-components-card-border rounded-xl shadow-sm inline-flex flex-col transition-all duration-200 ease-in-out cursor-pointer hover:shadow-lg'
+        className='relative h-[160px] group col-span-1 border rounded-md bg-white inline-flex flex-col transition-all duration-200 ease-in-out cursor-pointer hover:shadow-lg'
       >
         <div className='flex pt-[14px] px-[14px] pb-3 h-[66px] items-center gap-3 grow-0 shrink-0'>
-          <div className='relative shrink-0'>
-            <AppIcon
-              size="large"
-              iconType={app.icon_type}
-              icon={app.icon}
-              background={app.icon_background}
-              imageUrl={app.icon_url}
-            />
-            <AppTypeIcon type={app.mode} wrapperClassName='absolute -bottom-0.5 -right-0.5 w-4 h-4 shadow-sm' className='w-3 h-3' />
-          </div>
+
           <div className='grow w-0 py-[1px]'>
             <div className='flex items-center text-sm leading-5 font-semibold text-text-secondary'>
               <div className='truncate' title={app.name}>{app.name}</div>
@@ -301,6 +292,16 @@ const AppCard = ({ app, onRefresh }: AppCardProps) => {
               {app.mode === 'workflow' && <div className='truncate'>{t('app.types.workflow').toUpperCase()}</div>}
               {app.mode === 'completion' && <div className='truncate'>{t('app.types.completion').toUpperCase()}</div>}
             </div>
+          </div>
+          <div className='relative shrink-0'>
+            <AppIcon
+              size="large"
+              iconType={app.icon_type}
+              icon={app.icon}
+              background={app.icon_background}
+              imageUrl={app.icon_url}
+            />
+            <AppTypeIcon type={app.mode} wrapperClassName='absolute -bottom-0.5 -right-0.5 w-4 h-4 shadow-sm' className='w-3 h-3' />
           </div>
         </div>
         <div className='title-wrapper h-[90px] px-[14px] text-xs leading-normal text-text-tertiary'>

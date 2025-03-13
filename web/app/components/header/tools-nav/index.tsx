@@ -21,7 +21,7 @@ const ToolsNav = ({
 
   return (
     <Link href="/tools" className={classNames(
-      'group text-sm font-medium',
+      'group text-sm font-medium flex flex-col mb-2',
       activated && 'font-semibold bg-components-main-nav-nav-button-bg-active hover:bg-components-main-nav-nav-button-bg-active-hover shadow-md',
       activated ? 'text-components-main-nav-nav-button-text-active' : 'text-components-main-nav-nav-button-text hover:bg-components-main-nav-nav-button-bg-hover',
       className,

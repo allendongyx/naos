@@ -168,7 +168,7 @@ const PluginPage = ({
               activeTab === 'discover' && (
                 <>
                   <Link
-                    href={`https://docs.dify.ai/${locale === LanguagesSupported[1] ? 'v/zh-hans/' : ''}plugins/publish-plugins/publish-to-dify-marketplace`}
+                    href={`https://docs.naos.one/${locale === LanguagesSupported[1] ? 'v/zh-hans/' : ''}plugins/publish-plugins/publish-to-dify-marketplace`}
                     target='_blank'
                   >
                     <Button

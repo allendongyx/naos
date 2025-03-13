@@ -2,366 +2,375 @@
     "recommended_apps": {
         "en-US": {
             "categories": [
-                "Agent",
-                "Workflow",
-                "HR",
-                "Programming",
-                "Writing",
-                "Assistant"
+                "Trading",
+                "Defi",
+                "Web3",
+                "量化交易",
+                "Social",
+                "GameFI",
+                "Bitcoin"
             ],
             "recommended_apps": [
                 {
                     "app": {
-                        "icon": "🤖",
-                        "icon_background": "#FFEAD5",
-                        "id": "b53545b1-79ea-4da3-b31a-c39391c6f041",
-                        "mode": "chat",
-                        "name": "Website Generator"
-                    },
-                    "app_id": "b53545b1-79ea-4da3-b31a-c39391c6f041",
-                    "category": "Programming",
-                    "copyright": null,
-                    "description": null,
-                    "is_listed": true,
-                    "position": 10,
-                    "privacy_policy": null
-                },
-                {
-                    "app": {
-                        "icon": "🤑",
-                        "icon_background": "#E4FBCC",
-                        "id": "a23b57fa-85da-49c0-a571-3aff375976c1",
-                        "mode": "agent-chat",
-                        "name": "Investment Analysis Report Copilot"
-                    },
-                    "app_id": "a23b57fa-85da-49c0-a571-3aff375976c1",
-                    "category": "Agent",
-                    "copyright": "Dify.AI",
-                    "description": "Welcome to your personalized Investment Analysis Copilot service, where we delve into the depths of stock analysis to provide you with comprehensive insights. \n",
-                    "is_listed": true,
-                    "position": 10,
-                    "privacy_policy": null
-                },
-                {
-                    "app": {
-                        "icon": "🤖",
+                        "icon": "1.png",
                         "icon_background": "#FFEAD5",
                         "id": "f3303a7d-a81c-404e-b401-1f8711c998c1",
                         "mode": "advanced-chat",
-                        "name": "Workflow Planning Assistant "
+                        "name": "GameFi 经济顾问 "
                     },
                     "app_id": "f3303a7d-a81c-404e-b401-1f8711c998c1",
-                    "category": "Workflow",
+                    "category": "GameFI",
                     "copyright": null,
-                    "description": "An assistant that helps you plan and select the right node for a workflow (V0.6.0).  ",
+                    "description": "分析 P2E 游戏代币经济模型，预测通缩/通胀周期，优化玩家收益策略.  ",
                     "is_listed": true,
-                    "position": 4,
+                    "position": 1,
                     "privacy_policy": null
                 },
                 {
                     "app": {
-                        "icon": "🤖",
-                        "icon_background": "#FFEAD5",
-                        "id": "e9d92058-7d20-4904-892f-75d90bef7587",
-                        "mode": "advanced-chat",
-                        "name": "Automated Email Reply  "
-                    },
-                    "app_id": "e9d92058-7d20-4904-892f-75d90bef7587",
-                    "category": "Workflow",
-                    "copyright": null,
-                    "description": "Reply emails using Gmail API. It will automatically retrieve email in your inbox and create a response in Gmail. \nConfigure your Gmail API in Google Cloud Console. ",
-                    "is_listed": true,
-                    "position": 5,
-                    "privacy_policy": null
-                },
-                {
-                    "app": {
-                        "icon": "🤖",
-                        "icon_background": "#FFEAD5",
-                        "id": "98b87f88-bd22-4d86-8b74-86beba5e0ed4",
-                        "mode": "workflow",
-                        "name": "Book Translation "
-                    },
-                    "app_id": "98b87f88-bd22-4d86-8b74-86beba5e0ed4",
-                    "category": "Workflow",
-                    "copyright": null,
-                    "description": "A workflow designed to translate a full book up to 15000 tokens per run. Uses Code node to separate text into chunks and Iteration to translate each chunk. ",
-                    "is_listed": true,
-                    "position": 5,
-                    "privacy_policy": null
-                },
-                {
-                    "app": {
-                        "icon": "🤖",
-                        "icon_background": "#FFEAD5",
-                        "id": "cae337e6-aec5-4c7b-beca-d6f1a808bd5e",
-                        "mode": "chat",
-                        "name": "Python bug fixer"
-                    },
-                    "app_id": "cae337e6-aec5-4c7b-beca-d6f1a808bd5e",
-                    "category": "Programming",
-                    "copyright": null,
-                    "description": null,
-                    "is_listed": true,
-                    "position": 10,
-                    "privacy_policy": null
-                },
-                {
-                    "app": {
-                        "icon": "🤖",
-                        "icon_background": "#FFEAD5",
-                        "id": "d077d587-b072-4f2c-b631-69ed1e7cdc0f",
-                        "mode": "chat",
-                        "name": "Code Interpreter"
-                    },
-                    "app_id": "d077d587-b072-4f2c-b631-69ed1e7cdc0f",
-                    "category": "Programming",
-                    "copyright": "Copyright 2023 Dify",
-                    "description": "Code interpreter, clarifying the syntax and semantics of the code.",
-                    "is_listed": true,
-                    "position": 13,
-                    "privacy_policy": "https://dify.ai"
-                },
-                {
-                    "app": {
-                        "icon": "🎨",
-                        "icon_background": "#E4FBCC",
-                        "id": "73fbb5f1-c15d-4d74-9cc8-46d9db9b2cca",
-                        "mode": "agent-chat",
-                        "name": "SVG Logo Design "
-                    },
-                    "app_id": "73fbb5f1-c15d-4d74-9cc8-46d9db9b2cca",
-                    "category": "Agent",
-                    "copyright": "Dify.AI",
-                    "description": "Hello, I am your creative partner in bringing ideas to vivid life! I can assist you in creating stunning designs by leveraging abilities of DALL·E 3.  ",
-                    "is_listed": true,
-                    "position": 6,
-                    "privacy_policy": null
-                },
-                {
-                    "app": {
-                        "icon": "🤖",
-                        "icon_background": "#FFEAD5",
-                        "id": "5efb98d7-176b-419c-b6ef-50767391ab62",
-                        "mode": "advanced-chat",
-                        "name": "Long Story Generator (Iteration) "
-                    },
-                    "app_id": "5efb98d7-176b-419c-b6ef-50767391ab62",
-                    "category": "Workflow",
-                    "copyright": null,
-                    "description": "A workflow demonstrating how to use Iteration node to generate long article that is longer than the context length of LLMs. ",
-                    "is_listed": true,
-                    "position": 5,
-                    "privacy_policy": null
-                },
-                {
-                    "app": {
-                        "icon": "🤖",
-                        "icon_background": "#FFEAD5",
-                        "id": "f00c4531-6551-45ee-808f-1d7903099515",
-                        "mode": "workflow",
-                        "name": "Text Summarization Workflow"
-                    },
-                    "app_id": "f00c4531-6551-45ee-808f-1d7903099515",
-                    "category": "Workflow",
-                    "copyright": null,
-                    "description": "Based on users' choice, retrieve external knowledge to more accurately summarize articles.",
-                    "is_listed": true,
-                    "position": 5,
-                    "privacy_policy": null
-                },
-                {
-                    "app": {
-                        "icon": "🔢",
-                        "icon_background": "#E4FBCC",
-                        "id": "be591209-2ca8-410f-8f3b-ca0e530dd638",
-                        "mode": "agent-chat",
-                        "name": "YouTube Channel Data Analysis"
-                    },
-                    "app_id": "be591209-2ca8-410f-8f3b-ca0e530dd638",
-                    "category": "Agent",
-                    "copyright": "Dify.AI",
-                    "description": "I am a YouTube Channel Data Analysis Copilot, I am here to provide expert data analysis tailored to your needs. ",
-                    "is_listed": true,
-                    "position": 6,
-                    "privacy_policy": null
-                },
-                {
-                    "app": {
-                        "icon": "🤖",
-                        "icon_background": "#FFEAD5",
-                        "id": "a747f7b4-c48b-40d6-b313-5e628232c05f",
-                        "mode": "chat",
-                        "name": "Article Grading Bot"
-                    },
-                    "app_id": "a747f7b4-c48b-40d6-b313-5e628232c05f",
-                    "category": "Writing",
-                    "copyright": null,
-                    "description": "Assess the quality of articles and text based on user defined criteria. ",
-                    "is_listed": true,
-                    "position": 10,
-                    "privacy_policy": null
-                },
-                {
-                    "app": {
-                        "icon": "🤖",
-                        "icon_background": "#FFEAD5",
-                        "id": "18f3bd03-524d-4d7a-8374-b30dbe7c69d5",
-                        "mode": "workflow",
-                        "name": "SEO Blog Generator"
-                    },
-                    "app_id": "18f3bd03-524d-4d7a-8374-b30dbe7c69d5",
-                    "category": "Workflow",
-                    "copyright": null,
-                    "description": "Workflow for retrieving information from the internet, followed by segmented generation of SEO blogs.",
-                    "is_listed": true,
-                    "position": 5,
-                    "privacy_policy": null
-                },
-                {
-                    "app": {
-                        "icon": "🤖",
-                        "icon_background": null,
-                        "id": "050ef42e-3e0c-40c1-a6b6-a64f2c49d744",
-                        "mode": "completion",
-                        "name": "SQL Creator"
-                    },
-                    "app_id": "050ef42e-3e0c-40c1-a6b6-a64f2c49d744",
-                    "category": "Programming",
-                    "copyright": "Copyright 2023 Dify",
-                    "description": "Write SQL from natural language by pasting in your schema with the request.Please describe your query requirements in natural language and select the target database type.",
-                    "is_listed": true,
-                    "position": 13,
-                    "privacy_policy": "https://dify.ai"
-                },
-                {
-                    "app": {
-                        "icon": "🤖",
-                        "icon_background": "#FFEAD5",
-                        "id": "f06bf86b-d50c-4895-a942-35112dbe4189",
-                        "mode": "workflow",
-                        "name": "Sentiment Analysis "
-                    },
-                    "app_id": "f06bf86b-d50c-4895-a942-35112dbe4189",
-                    "category": "Workflow",
-                    "copyright": null,
-                    "description": "Batch sentiment analysis of text, followed by JSON output of sentiment classification along with scores.",
-                    "is_listed": true,
-                    "position": 5,
-                    "privacy_policy": null
-                },
-                {
-                    "app": {
-                        "icon": "🤖",
-                        "icon_background": "#FFEAD5",
-                        "id": "7e8ca1ae-02f2-4b5f-979e-62d19133bee2",
-                        "mode": "chat",
-                        "name": "Strategic Consulting Expert"
-                    },
-                    "app_id": "7e8ca1ae-02f2-4b5f-979e-62d19133bee2",
-                    "category": "Assistant",
-                    "copyright": "Copyright 2023 Dify",
-                    "description": "I can answer your questions related to strategic marketing.",
-                    "is_listed": true,
-                    "position": 10,
-                    "privacy_policy": "https://dify.ai"
-                },
-                {
-                    "app": {
-                        "icon": "🤖",
-                        "icon_background": null,
-                        "id": "4006c4b2-0735-4f37-8dbb-fb1a8c5bd87a",
-                        "mode": "completion",
-                        "name": "Code Converter"
-                    },
-                    "app_id": "4006c4b2-0735-4f37-8dbb-fb1a8c5bd87a",
-                    "category": "Programming",
-                    "copyright": "Copyright 2023 Dify",
-                    "description": "This is an application that provides the ability to convert code snippets in multiple programming languages. You can input the code you wish to convert, select the target programming language, and get the desired output.",
-                    "is_listed": true,
-                    "position": 10,
-                    "privacy_policy": "https://dify.ai"
-                },
-                {
-                    "app": {
-                        "icon": "🤖",
+                        "icon": "2.png",
                         "icon_background": "#FFEAD5",
                         "id": "d9f6b733-e35d-4a40-9f38-ca7bbfa009f7",
                         "mode": "advanced-chat",
-                        "name": "Question Classifier + Knowledge + Chatbot "
+                        "name": "稳定币锚定卫士 "
                     },
                     "app_id": "d9f6b733-e35d-4a40-9f38-ca7bbfa009f7",
                     "category": "Workflow",
                     "copyright": null,
-                    "description": "Basic Workflow Template, a chatbot capable of identifying intents alongside with a knowledge base.",
+                    "description": "控 USDT/USDC 等储备证明，预警脱钩风险与套利机会.",
                     "is_listed": true,
-                    "position": 4,
+                    "position": 2,
                     "privacy_policy": null
                 },
                 {
                     "app": {
-                        "icon": "🤖",
-                        "icon_background": null,
-                        "id": "127efead-8944-4e20-ba9d-12402eb345e0",
-                        "mode": "chat",
-                        "name": "AI Front-end interviewer"
-                    },
-                    "app_id": "127efead-8944-4e20-ba9d-12402eb345e0",
-                    "category": "HR",
-                    "copyright": "Copyright 2023 Dify",
-                    "description": "A simulated front-end interviewer that tests the skill level of front-end development through questioning.",
-                    "is_listed": true,
-                    "position": 19,
-                    "privacy_policy": "https://dify.ai"
-                },
-                {
-                    "app": {
-                        "icon": "🤖",
+                        "icon": "3.png",
                         "icon_background": "#FFEAD5",
                         "id": "e9870913-dd01-4710-9f06-15d4180ca1ce",
                         "mode": "advanced-chat",
-                        "name": "Knowledge Retrieval + Chatbot "
+                        "name": "碳足迹链上公证人 "
                     },
                     "app_id": "e9870913-dd01-4710-9f06-15d4180ca1ce",
                     "category": "Workflow",
                     "copyright": null,
-                    "description": "Basic Workflow Template, A chatbot with a knowledge base. ",
+                    "description": "通过物联网设备采集企业生产数据，自动生成不可篡改的碳中和报告，接入 DeFi 碳信用交易市场. ",
+                    "is_listed": true,
+                    "position": 3,
+                    "privacy_policy": null
+                },
+
+                {
+                    "app": {
+                        "icon": "4.png",
+                        "icon_background": "#FFEAD5",
+                        "id": "e9d92058-7d20-4904-892f-75d90bef7587",
+                        "mode": "advanced-chat",
+                        "name": "大V舆情分析师"
+                    },
+                    "app_id": "e9d92058-7d20-4904-892f-75d90bef7587",
+                    "category": "Social",
+                    "copyright": null,
+                    "description": "监控 Vitalik/江卓尔等意见领袖言论，生成情绪指数与潜在市场影响报告. ",
                     "is_listed": true,
                     "position": 4,
                     "privacy_policy": null
                 },
+
                 {
                     "app": {
-                        "icon": "🤖",
+                        "icon": "5.png",
                         "icon_background": "#FFEAD5",
-                        "id": "dd5b6353-ae9b-4bce-be6a-a681a12cf709",
+                        "id": "98b87f88-bd22-4d86-8b74-86beba5e0ed4",
                         "mode": "workflow",
-                        "name": "Email Assistant Workflow "
+                        "name": "智能合约审计专家 "
                     },
-                    "app_id": "dd5b6353-ae9b-4bce-be6a-a681a12cf709",
-                    "category": "Workflow",
+                    "app_id": "98b87f88-bd22-4d86-8b74-86beba5e0ed4",
+                    "category": "Development",
                     "copyright": null,
-                    "description": "A multifunctional email assistant capable of summarizing, replying, composing, proofreading, and checking grammar.",
+                    "description": "自动化检测 Solidity/Vyper 合约漏洞，提供 Gas 优化与安全加固方案. ",
                     "is_listed": true,
                     "position": 5,
                     "privacy_policy": null
                 },
                 {
                     "app": {
-                        "icon": "🤖",
+                        "icon": "6.png",
+                        "icon_background": "#FFEAD5",
+                        "id": "5efb98d7-176b-419c-b6ef-50767391ab62",
+                        "mode": "advanced-chat",
+                        "name": "DAO 治理提案分析 "
+                    },
+                    "app_id": "5efb98d7-176b-419c-b6ef-50767391ab62",
+                    "category": "Workflow",
+                    "copyright": null,
+                    "description": "解析治理提案文本，预测投票结果与代币价格波动关联性. ",
+                    "is_listed": true,
+                    "position": 6,
+                    "privacy_policy": null
+                },
+
+                {
+                    "app": {
+                        "icon": "7.png",
+                        "icon_background": "#FFEAD5",
+                        "id": "f00c4531-6551-45ee-808f-1d7903099515",
+                        "mode": "workflow",
+                        "name": "监管合规助手"
+                    },
+                    "app_id": "f00c4531-6551-45ee-808f-1d7903099515",
+                    "category": "Legal",
+                    "copyright": null,
+                    "description": "自动检测交易行为是否符合 FATF/各国监管要求，生成合规报告.",
+                    "is_listed": true,
+                    "position": 7,
+                    "privacy_policy": null
+                },
+
+                {
+                    "app": {
+                        "icon": "8.png",
+                        "icon_background": "#FFEAD5",
+                        "id": "18f3bd03-524d-4d7a-8374-b30dbe7c69d5",
+                        "mode": "workflow",
+                        "name": "DApp 流量预言家"
+                    },
+                    "app_id": "18f3bd03-524d-4d7a-8374-b30dbe7c69d5",
+                    "category": "Analytics",
+                    "copyright": null,
+                    "description": "分析用户行为数据，预测新兴 DApp 的 TVL 增长曲线与代币爆发潜力.",
+                    "is_listed": true,
+                    "position": 8,
+                    "privacy_policy": null
+                },
+                {
+                    "app": {
+                        "icon": "9.png",
+                        "icon_background": "#FFEAD5",
+                        "id": "f06bf86b-d50c-4895-a942-35112dbe4189",
+                        "mode": "workflow",
+                        "name": "MEV 机器人指挥官 "
+                    },
+                    "app_id": "f06bf86b-d50c-4895-a942-35112dbe4189",
+                    "category": "Workflow",
+                    "copyright": null,
+                    "description": "设计三明治攻击防御策略，优化交易排序与区块空间竞拍方案.",
+                    "is_listed": true,
+                    "position": 9,
+                    "privacy_policy": null
+                },
+
+                {
+                    "app": {
+                        "icon": "10.png",
+                        "icon_background": "#FFEAD5",
+                        "id": "dd5b6353-ae9b-4bce-be6a-a681a12cf709",
+                        "mode": "workflow",
+                        "name": "AI 创作联邦管家 "
+                    },
+                    "app_id": "dd5b6353-ae9b-4bce-be6a-a681a12cf709",
+                    "category": "Workflow",
+                    "copyright": null,
+                    "description": "管理 Stable Diffusion/Midjourney 生成作品的区块链确权，自动拆分多层级版权收益（原始提示词作者/模型训练者/最终创作者）.",
+                    "is_listed": true,
+                    "position": 10,
+                    "privacy_policy": null
+                },
+                {
+                    "app": {
+                        "icon": "11.png",
                         "icon_background": "#FFEAD5",
                         "id": "9c0cd31f-4b62-4005-adf5-e3888d08654a",
                         "mode": "workflow",
-                        "name": "Customer Review Analysis Workflow "
+                        "name": "元宇宙身份熔炉 "
                     },
                     "app_id": "9c0cd31f-4b62-4005-adf5-e3888d08654a",
                     "category": "Workflow",
                     "copyright": null,
-                    "description": "Utilize LLM (Large Language Models) to classify customer reviews and forward them to the internal system.",
+                    "description": "聚合 Decentraland/Roblox/SecondLife 等虚拟身份数据，铸造跨平台 SBT（灵魂绑定代币），构建去中心化声誉体系.",
                     "is_listed": true,
-                    "position": 5,
+                    "position": 11,
+                    "privacy_policy": null
+                },
+                {
+                    "app": {
+                        "icon": "12.png",
+                        "icon_background": "#E4FBCC",
+                        "id": "73fbb5f1-c15d-4d74-9cc8-46d9db9b2cca",
+                        "mode": "agent-chat",
+                        "name": "矿工收益优化器 "
+                    },
+                    "app_id": "73fbb5f1-c15d-4d74-9cc8-46d9db9b2cca",
+                    "category": "Agent",
+                    "copyright": "Dify.AI",
+                    "description": "实时计算 PoW/PoS 挖矿收益，推荐最佳矿池组合与电力成本控制方案.  ",
+                    "is_listed": true,
+                    "position": 12,
+                    "privacy_policy": null
+                },
+                {
+                    "app": {
+                        "icon": "13.png",
+                        "icon_background": "#E4FBCC",
+                        "id": "be591209-2ca8-410f-8f3b-ca0e530dd638",
+                        "mode": "agent-chat",
+                        "name": "闪电贷套利大师"
+                    },
+                    "app_id": "be591209-2ca8-410f-8f3b-ca0e530dd638",
+                    "category": "DeFi",
+                    "copyright": "Naos.one",
+                    "description": "监控 Aave/dYdX 等平台的瞬时利差，设计无风险套利交易路径. ",
+                    "is_listed": true,
+                    "position": 13,
+                    "privacy_policy": null
+                },
+                {
+                    "app": {
+                        "icon": "14.png",
+                        "icon_background": "#FFEAD5",
+                        "id": "b53545b1-79ea-4da3-b31a-c39391c6f041",
+                        "mode": "chat",
+                        "name": "量化策略生成器"
+                    },
+                    "app_id": "b53545b1-79ea-4da3-b31a-c39391c6f041",
+                    "category": "Trading",
+                    "copyright": null,
+                    "description": "基于历史链上数据与市场情绪，自动生成动态量化交易策略，支持回测与实时调参. \n",
+                    "is_listed": true,
+                    "position": 14,
+                    "privacy_policy": null
+                },
+                {
+                    "app": {
+                        "icon": "15.png",
+                        "icon_background": "#E4FBCC",
+                        "id": "a23b57fa-85da-49c0-a571-3aff375976c1",
+                        "mode": "agent-chat",
+                        "name": "链上数据侦探"
+                    },
+                    "app_id": "a23b57fa-85da-49c0-a571-3aff375976c1",
+                    "category": "Security",
+                    "copyright": "Allen",
+                    "description": "实时追踪巨鲸地址、交易所热钱包流动，识别可疑交易模式与潜在 Rug Pull 风险. \n",
+                    "is_listed": true,
+                    "position": 15,
+                    "privacy_policy": null
+                },
+                
+                {
+                    "app": {
+                        "icon": "16.png",
+                        "icon_background": "#FFEAD5",
+                        "id": "cae337e6-aec5-4c7b-beca-d6f1a808bd5e",
+                        "mode": "chat",
+                        "name": "跨链资产桥接"
+                    },
+                    "app_id": "cae337e6-aec5-4c7b-beca-d6f1a808bd5e",
+                    "category": "Programming",
+                    "copyright": null,
+                    "description": "监控多链流动性池，推荐最优跨链路径与手续费套利机会",
+                    "is_listed": true,
+                    "position": 16,
+                    "privacy_policy": null
+                },
+                {
+                    "app": {
+                        "icon": "17.png",
+                        "icon_background": "#FFEAD5",
+                        "id": "a747f7b4-c48b-40d6-b313-5e628232c05f",
+                        "mode": "chat",
+                        "name": "私钥恢复专家"
+                    },
+                    "app_id": "a747f7b4-c48b-40d6-b313-5e628232c05f",
+                    "category": "Writing",
+                    "copyright": null,
+                    "description": "通过部分记忆碎片与交易特征，尝试重构丢失的加密货币钱包私钥. ",
+                    "is_listed": true,
+                    "position": 17,
+                    "privacy_policy": null
+                },
+                {
+                    "app": {
+                        "icon": "18.png",
+                        "icon_background": "#FFEAD5",
+                        "id": "7e8ca1ae-02f2-4b5f-979e-62d19133bee2",
+                        "mode": "chat",
+                        "name": "元宇宙地产评估"
+                    },
+                    "app_id": "7e8ca1ae-02f2-4b5f-979e-62d19133bee2",
+                    "category": "Metaverse",
+                    "copyright": "Naos.one",
+                    "description": "分析 Decentraland/Sandbox 地块坐标价值，生成三维可视化估值报告.",
+                    "is_listed": true,
+                    "position": 18,
+                    "privacy_policy": null
+                },
+                {
+                    "app": {
+                        "icon": "19.png",
+                        "icon_background": null,
+                        "id": "4006c4b2-0735-4f37-8dbb-fb1a8c5bd87a",
+                        "mode": "completion",
+                        "name": "区块链教育导师"
+                    },
+                    "app_id": "4006c4b2-0735-4f37-8dbb-fb1a8c5bd87a",
+                    "category": "Education",
+                    "copyright": "Copyright 2023 Dify",
+                    "description": "个性化教学从零到精通，实时生成智能合约编程练习题与模拟攻防场景.",
+                    "is_listed": true,
+                    "position": 19,
+                    "privacy_policy": null
+                },
+                {
+                    "app": {
+                        "icon": "20.png",
+                        "icon_background": "#FFEAD5",
+                        "id": "d077d587-b072-4f2c-b631-69ed1e7cdc0f",
+                        "mode": "chat",
+                        "name": "NFT 估值预言机"
+                    },
+                    "app_id": "d077d587-b072-4f2c-b631-69ed1e7cdc0f",
+                    "category": "Programming",
+                    "copyright": "Naos.one",
+                    "description": "结合链上交易历史与稀有度特征，动态评估 NFT 藏品公允价值区间.",
+                    "is_listed": true,
+                    "position": 20,
+                    "privacy_policy": null
+                },
+                {
+                    "app": {
+                        "icon": "21.png",
+                        "icon_background": null,
+                        "id": "050ef42e-3e0c-40c1-a6b6-a64f2c49d744",
+                        "mode": "completion",
+                        "name": "数字版权公证人"
+                    },
+                    "app_id": "050ef42e-3e0c-40c1-a6b6-a64f2c49d744",
+                    "category": "NFT",
+                    "copyright": "Naos.one",
+                    "description": "自动将创意作品哈希上链，生成时间戳证明与NFT化版权证书.",
+                    "is_listed": true,
+                    "position": 21,
+                    "privacy_policy": null
+                },
+                
+                {
+                    "app": {
+                        "icon": "22.png",
+                        "icon_background": null,
+                        "id": "127efead-8944-4e20-ba9d-12402eb345e0",
+                        "mode": "chat",
+                        "name": "隐私币混币顾问"
+                    },
+                    "app_id": "127efead-8944-4e20-ba9d-12402eb345e0",
+                    "category": "Privacy",
+                    "copyright": "Naos.one",
+                    "description": "设计 Monero/Zcash 匿名交易路径，分析链上追踪可能性.",
+                    "is_listed": true,
+                    "position": 22,
                     "privacy_policy": null
                 }
+                
             ]
         },
         "zh-Hans": {

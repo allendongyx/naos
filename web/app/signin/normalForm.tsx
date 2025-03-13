@@ -1,6 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import Link from 'next/link'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { RiContractLine, RiDoorLockLine, RiErrorWarningFill } from '@remixicon/react'
 import Loading from '../components/base/loading'
@@ -12,7 +11,6 @@ import cn from '@/utils/classnames'
 import { getSystemFeatures, invitationCheck } from '@/service/common'
 import { LicenseStatus, defaultSystemFeatures } from '@/types/feature'
 import Toast from '@/app/components/base/toast'
-import { IS_CE_EDITION } from '@/config'
 
 const NormalForm = () => {
   const { t } = useTranslation()
@@ -135,8 +133,8 @@ const NormalForm = () => {
             <p className='mt-2 body-md-regular text-text-tertiary'>{t('login.joinTipStart')}{workspaceName}{t('login.joinTipEnd')}</p>
           </div>
           : <div className="w-full mx-auto">
-            <h2 className="title-4xl-semi-bold text-text-primary">{t('login.pageTitle')}</h2>
-            <p className='mt-2 body-md-regular text-text-tertiary'>{t('login.welcome')}</p>
+            <h2 className="title-4xl-semi-bold text-2xl text-center text-text-primary">{t('login.pageTitle')}</h2>
+            {/* <p className='mt-2 body-md-regular text-text-tertiary'>{t('login.welcome')}</p> */}
           </div>}
         <div className="bg-white">
           <div className="flex flex-col gap-3 mt-6">
@@ -184,7 +182,7 @@ const NormalForm = () => {
               </div>
             </div>
           </>}
-          <div className="w-full block mt-2 system-xs-regular text-text-tertiary">
+          {/* <div className="w-full block mt-2 system-xs-regular text-text-tertiary">
             {t('login.tosDesc')}
             &nbsp;
             <Link
@@ -206,7 +204,7 @@ const NormalForm = () => {
               className='system-xs-medium text-text-secondary hover:underline'
               href='/install'
             >{t('login.setAdminAccount')}</Link>
-          </div>}
+          </div>} */}
 
         </div>
       </div>

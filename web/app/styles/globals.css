@@ -680,6 +680,10 @@ button:focus-within {
   display: none;
 }
 
+.naos-ctx-bg{
+  background-color: rgb(252, 252, 255)
+}
+
 @import "../components/base/button/index.css";
 @import "../components/base/action-button/index.css";
 @import "../components/base/modal/index.css";
